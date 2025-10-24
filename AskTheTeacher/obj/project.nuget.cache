@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uHLbMuR0ZzA=",
+  "success": true,
+  "projectFilePath": "/Users/danin/Projects/Ask-The-Teacher/AskTheTeacher/AskTheTeacher.csproj",
+  "expectedPackageFiles": [
+    "/Users/danin/.nuget/packages/microsoft.aspnetcore.openapi/9.0.10/microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
+    "/Users/danin/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
