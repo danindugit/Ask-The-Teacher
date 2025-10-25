@@ -1,5 +1,6 @@
 using Supabase.Postgrest.Models;
 using Supabase.Postgrest.Attributes;
+using System.Text.Json.Serialization;
 
 namespace AskTheTeacher.Models
 {
@@ -7,6 +8,7 @@ namespace AskTheTeacher.Models
     public class Question : BaseModel
     {
         [PrimaryKey("id", false)]
+        [JsonIgnore]
         public int Id { get; set; }
 
         [Column("created_at")]
