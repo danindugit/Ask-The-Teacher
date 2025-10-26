@@ -5,6 +5,7 @@ namespace AskTheTeacher.DTOs
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public int StudentId { get; set; }
+        public string title{ get; set; } = string.Empty;
         public string Text { get; set; } = string.Empty;
     }
 }

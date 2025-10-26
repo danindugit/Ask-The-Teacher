@@ -27,6 +27,7 @@ namespace AskTheTeacher.Controllers
                     Id = q.Id,
                     CreatedAt = q.CreatedAt,
                     StudentId = q.StudentID,
+                    title = q.Title,
                     Text = q.QuestionText
                 })
                 .ToList();

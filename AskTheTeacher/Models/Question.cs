@@ -16,6 +16,8 @@ namespace AskTheTeacher.Models
 
         [Column("studentID")]
         public int StudentID { get; set; }
+        [Column("title")]
+        public string Title { get; set; } = string.Empty;
 
         [Column("question")]
         public string QuestionText { get; set; } = string.Empty;
