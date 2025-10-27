@@ -1,7 +1,7 @@
-import "./Login.css";
 import { supabase } from './supabaseConfig';
 import { useState, useEffect } from 'react';
 import RoleSelection from './RoleSelection';
+import Student from './Student';
 
 export default function Login() {
     const [user, setUser] = useState(null);
@@ -106,9 +106,14 @@ export default function Login() {
     if (user && userRole) {
         return (
             <div>
-                <h1>Welcome!</h1>
-                <p>You are logged in as a {userRole}</p>
-                <p>Email: {user.email}</p>
+                {userRole === 'student' && <Student user={user} />}
+            
+                {userRole === 'teacher' && (
+                    <div>
+                        <h1>Welcome Teacher!</h1>
+                        <p>Teacher dashboard coming soon...</p>
+                    </div>
+                )}
                 <button onClick={handleLogout}>
                     Logout
                 </button>

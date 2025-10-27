@@ -15,7 +15,7 @@ namespace AskTheTeacher.Models
         public DateTime CreatedAt { get; set; }
 
         [Column("studentID")]
-        public int StudentID { get; set; }
+        public string StudentID { get; set; } = string.Empty;
         [Column("title")]
         public string Title { get; set; } = string.Empty;
 
