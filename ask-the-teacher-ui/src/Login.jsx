@@ -2,6 +2,7 @@ import { supabase } from './supabaseConfig';
 import { useState, useEffect } from 'react';
 import RoleSelection from './RoleSelection';
 import Student from './Student';
+import Teacher from './Teacher';
 
 export default function Login() {
     const [user, setUser] = useState(null);
@@ -107,13 +108,8 @@ export default function Login() {
         return (
             <div>
                 {userRole === 'student' && <Student user={user} />}
-            
-                {userRole === 'teacher' && (
-                    <div>
-                        <h1>Welcome Teacher!</h1>
-                        <p>Teacher dashboard coming soon...</p>
-                    </div>
-                )}
+                {userRole === 'teacher' && <Teacher user={user} />}
+
                 <button onClick={handleLogout}>
                     Logout
                 </button>
