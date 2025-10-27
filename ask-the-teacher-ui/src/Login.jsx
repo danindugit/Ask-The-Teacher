@@ -63,6 +63,19 @@ export default function Login() {
         }
     }
 
+    const handleGoogleLogin = async () => {
+        const { error } = await supabase.auth.signInWithOAuth({
+            provider: 'google',
+            options: {
+                redirectTo: 'http://localhost:5173',
+            },
+        });
+
+        if (error) {
+            console.error("Error during login:", error.message);
+        }
+    };
+
     const handleLogout = async () => {
         await supabase.auth.signOut();
         setUser(null);
@@ -107,6 +120,9 @@ export default function Login() {
         <div>
             <h1>Ask the Teacher</h1>
             <button onClick={handleAzureLogin}>Login with Microsoft</button>
+            <br />
+            <br />
+            <button onClick={handleGoogleLogin}>Login with Google</button>
         </div>
     );
 }
