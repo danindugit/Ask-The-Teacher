@@ -17,15 +17,6 @@ export default function Student({ user }) {
         setLoading(true);
         setMessage('');
 
-        const requestBody = {
-            studentId: user.id,
-            title: title,
-            text: questionText
-        };
-
-        console.log('Sending request:', requestBody);
-        console.log('User object:', user);
-
         try {
             const response = await fetch('http://localhost:5211/api/Questions', {
                 method: 'POST',
