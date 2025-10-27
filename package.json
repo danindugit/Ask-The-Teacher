@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@azure/msal-browser": "^4.25.1",
+    "@azure/msal-react": "^3.0.20"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "vite": "^7.1.12"
+  }
+}

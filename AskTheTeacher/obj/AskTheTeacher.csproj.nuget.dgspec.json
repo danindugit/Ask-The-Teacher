@@ -44,9 +44,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             },
             "Supabase": {
               "target": "Package",
